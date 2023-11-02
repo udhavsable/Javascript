@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function id()
+        {
+            document.bgColor="aqua"
+        }
+        function fcs()
+        {
+            document.getElementById("t1").style.backgroundColor="pink"
+            document.getElementById("t1").style.color="purple"
+        }
+        function blr()
+        {
+            document.getElementById("t1").style.fontSize="25px"
+        }
+        function slt()
+        {
+            let a=document.getElementById("t2")
+            a.value=a.value.toUpperCase()
+            a.style.fontSize="30px"
+        }
+        function chng()
+        {
+            let x=document.getElementById("sel").value
+            document.getElementById("head").innerHTML="you have selected "+x+" city"
+        }
+        function sbmt()
+        {
+            alert("Form Submitted Sucessfully:")
+        }
+        function rst()
+        {
+            alert("you have cleared the form please fill it again:")
+        }
+    </script>
+</head>
+<body onload="id()">
+    <h2 id="head"></h2>
+    <form onsubmit="sbmt()" onreset="rst()">
+        <input type="text" placeholder="enter first name" id="t1" onfocus="fcs()" onblur="blr()"><br><br>
+        <input type="text" placeholder="enter last name" id="t2" onselect="slt()"><br><br>
+        <input type="text" placeholder="enter city name" id="t3"><br><br>
+        <select placeholder="Select City" id="sel" onchange="chng()">
+             <option>Pune</option>
+             <option>Mumbai</option>
+             <option>Delhi</option>
+             <option>Hydrabad</option>
+             <option>Banglore</option>
+        </select><br><br>
+        <input type="submit" value="SUBMIT">
+        <input type="reset" value="RESET">
+    </form>
+</body>
+</html>

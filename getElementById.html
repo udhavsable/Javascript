@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <img src="images1/b1.jpeg" id="image" height="100" width="100"><br>
+    <button onclick="changecont()">
+        Change Contents
+    </button>
+</body>
+</html>
+<script>
+    document.getElementById("p1").innerHTML="Welcome to document Object Model"
+    document.getElementById("p1").style.color="blue"
+    document.getElementById("p1").style.fontSize="50px"
+    function changecont()
+    {
+        document.getElementById("image").src="images1/b2.jpeg"
+        document.getElementById("image").height="150"
+        document.getElementById("image").width="150"
+    }
+</script>
