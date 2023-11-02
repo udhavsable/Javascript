@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sum()
+        {
+           var a=parseInt(document.frm1.t1.value)
+           var b=parseInt(document.frm1.t2.value)
+           let c=a+b
+           document.frm1.t3.value=c
+        }
+    </script>
+</head>
+<body>
+    <form name="frm1">
+        <label>Enter 1st number:</label>
+        <input type="text" name="t1"><br><br>
+        <label>Enter 2nd number:</label>
+        <input type="text" name="t2"><br><br>
+        <label>Result:</label>
+        <input type="text" name="t3"><br><br>
+        <input type="button" onclick="sum()" value="ADD">
+    </form>
+</body>
+</html>

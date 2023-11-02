@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <thead>
+            <tr><th>ROLL NO.</th><th>PHOTO</th><th>NAME</th><th>EMAIL</th><th>CITY</th><th>PHONE</th></tr>
+        </thead>
+        <tbody id="tab">
+
+        </tbody>
+    </table>
+    <script>
+        let emp={
+            id:101,
+            name:"Uddhav",
+            // email:"Sableuddhav626@gmail.com",
+            email:"",
+            phone:[8767679317,9850323637,9527019767],
+            // city:"pune",
+            location:{
+                name:"Shanivar vada",
+                city:"pune"
+            },
+            age:function()
+            {
+                return 35
+            }
+        }
+        document.write("Employee Name is:"+emp.name+"<br>"+"Phone Number is:"+emp.phone[2]+"<br>")
+        document.write("Location details are:"+"<br>"+"Name:"+emp.location.name+"<br>"+"City is:"+emp.location.city+"<br>")
+        emp.email="üddhavsable2967@gmail.com"
+        document.write("email: "+emp.email+"<br>")
+        document.write("age: "+emp.age()+"<br>")
+
+        let stud=[
+            {
+                rno:1,
+                photo:"images1/b1.jpeg",
+                name:"Amay",
+                email:"Amayjagtap04@gmail.com",
+                city:"Shrirampur",
+                phone:8308680819
+            },
+            {
+                rno:2,
+                photo:"images1/b2.jpeg",
+                name:"Uddhav",
+                email:"Uddhavsable296@gmail.com",
+                city:"Pune",
+                phone:8767679317
+            },
+            {
+                rno:3,
+                photo:"images1/g1.jpeg",
+                name:"Nutan",
+                email:"Nutannigal08@gmail.com",
+                city:"Mumbai",
+                phone:9850323637
+            }, 
+            {
+                rno:4,
+                photo:"images1/g1.jpeg",
+                name:"Rutuja",
+                email:"Rutujanagude2002@gmail.com",
+                city:"Satara",
+                phone:9657920268
+            }
+        ]
+        for(let i=0;i<stud.length;i++)
+        {
+            // document.write(stud[i].name+","+stud[i].city+","+stud[i].email+"<br>")
+            document.write(stud[i].rno+","+stud[i].name+","+stud[i].city+","+stud[i].email+"<br>")
+        }
+        stud.map(function(item,index)
+        {
+            document.getElementById("tab").innerHTML+=`
+            <tr><td>${item.rno}</td><td><img src=${item.photo} height=80 width=80></td><td>${item.name}</td><td>${item.email}</td><td>${item.city}</td><td>${item.phone}</td></tr>`
+        })
+    </script>
+</body>
+</html>

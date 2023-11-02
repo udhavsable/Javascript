@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a,b,add,sub,mul,div
+        a=parseInt(prompt("Enter the number:"))
+        b=parseInt(prompt("Enter the number:"))
+        do{
+            alert("1:Addition\n2:Substraction\n3:Multiplication\n4:Division\n5:Exit")
+            var ch=parseInt(prompt("Which operation you want to the perform?\n Enter the choice"))
+            switch(ch)
+            {
+                case 1:
+                    add=a+b
+                    alert("Addition is : "+add)
+                    break
+                case 2:
+                    sub=a-b
+                    alert("Substraction is : "+sub)
+                    break
+                case 3:
+                    mul=a*b
+                    alert("Multiplication is : "+mul)
+                    break
+                case 4:
+                    div=a/b
+                    alert("Division is : "+div)
+                    break
+                case 5:
+                    alert("exit")
+                    break
+            }
+        }while(ch<=4)
+    </script>
+</body>
+</html>

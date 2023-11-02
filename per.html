@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var marks//,s1,s2,s3,s4,s5
+        // s1=parseInt(prompt("Enter the number:"))
+        // s2=parseInt(prompt("Enter the number:"))
+        // s3=parseInt(prompt("Enter the number:"))
+        // s4=parseInt(prompt("Enter the number:"))
+        // s5=parseInt(prompt("Enter the number:"))
+        // Function to calculate percentage
+         function calculatePercentage(marks, totalMarks) {
+         return (marks / totalMarks) * 100;
+     }
+
+      // Array to store user input marks
+      var studentMarks = [];
+
+      // Total marks for simplicity (you can modify this based on the total marks)
+      var totalMarks = 100;
+
+      // Taking input from the user for five students
+      for (var i = 1; i <= 5; i++) {
+      var marks = parseFloat(prompt("Enter marks for Student " + i));
+      // Validating the input (marks should be a number)
+         if (!isNaN(marks)) {
+            studentMarks.push(marks);
+           }     
+        else { 
+            alert("Invalid input. Please enter a valid number.");
+             // Decrement the loop counter to take input for the same student again
+            i--;
+        }
+    }
+
+       // Calculating and displaying percentages
+       for (var i = 0; i < studentMarks.length; i++) {
+       var percentage = calculatePercentage(studentMarks[i], totalMarks);
+       console.log("Student " + (i + 1) + " Percentage: " + percentage.toFixed(2) + "%");
+    }
+
+    </script>
+</body>
+</html>

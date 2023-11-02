@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x="  Sevenmentor Pvt. Ltd.   "
+      
+        document.write("Length of string is:"+x.length+"<br>") 
+        document.write("String in uppercase letters is:"+x.toUpperCase()+"<br>")
+        document.write("String in lowercase letters is:"+x.toLowerCase()+"<br>")
+        document.write("Character at a position is:"+x.charAt(5)+"<br>")
+        document.write("First position of a letter in the string is:"+x.indexOf("t")+"<br>")
+        document.write("Last position of a letter in the string is:"+x.lastIndexOf("t")+"<br>")
+        document.write("Substring the string is:"+x.substr(7,6)+"<br>")
+        document.write("Substring the string is:"+x.substring(7,17)+"<br>")
+        let y=x.trim()
+        document.write("Trim method is: "+y+"<br>")
+        document.write("Length of string after trim is: "+y.length)
+        document.write("Replace method: "+x.replace("Pvt. Ltd.","Education center"))
+        let c=x.repeat(3)
+        document.write("Repeat method: "+c)
+    </script>
+</body>
+</html>

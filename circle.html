@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var x,y,area
+        // x=prompt("enter the number:")
+        // x=parseInt(x)
+        // y=prompt("enter the number:")
+        // y=parseInt(y)
+        // area=3.14*x*x
+        // document.write("area of circle"+area)
+         function calculateArea(radius)
+         {
+            return Math.PI*radius*radius;
+         }
+         function calculatecircumference(radius)
+         {
+            return 2*Math.PI*radius;
+         }
+         const radius=parseInt(prompt("enter the radius of the circle:"));
+        
+         if(!isNaN(radius) && radius>0)
+         {
+            const area=calculateArea(radius);
+            const circumference=calculatecircumference(radius);
+
+            console.log("area is the circle:"+area.tofixed(2));
+            console.log("circumference is the circle:"+circumference.tofixed(2));
+         }
+         else{
+            console.log("invalid input:")
+         }
+    </script>
+</body>
+</html>
