@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+   <script>
+    function elements()
+    {
+         let x=document.getElementById("head1")
+         let arr1=document.getElementsByClassName("p1")
+         let arr2=document.getElementsByClassName("p2")
+         x.innerHTML="Text in first paragraph is: "+arr1[0].innerHTML
+         arr1[0].style.color="purple"
+         for(let i=0;i<arr1.length;i++)
+         {
+            document.getElementById("head2").innerHTML+="Text in class p1 is: "+arr1[i].innerHTML+"<br>"
+         }
+         let arr3=document.getElementsByClassName("image")
+         arr3[0].src="images1/b2.jpeg"
+         arr3[0].src="images1/g2.jpeg"
+    }
+   </script> 
+    <h1>Heading One</h1>
+    <h2 id="head1"></h2>
+    <h3 id="head2"></h3>
+    <h4 id="head3"></h4>
+    <img src="images1/b1.jpeg" class="image" height="100" width="100">
+    <img src="images1/g1.jpeg" class="image" height="100" width="100">
+    <p class="p1">Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.</p>
+    <p class="p1">Consectetur adipisicing elit.</p>
+    <p class="p2">Dolorem nihil modi qui! Nam</p>
+    <p class="p2">Fugit ipsum magni numquam consequuntur minima</p>
+    <p id="p3"></p>
+    <button onclick="elements()">Access elements</button>
+</body>
+</html>
