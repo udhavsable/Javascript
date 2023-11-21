@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SevenMentor Pvt. Ltd.</h1>
+    <h2 id="head1"></h2>
+    <p>Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.</p>
+    <p>Srisanta Plaza</p>
+    <p> Satrawadi Rampurwadi</p>
+    <p>F.C.Road,pune</p>
+    <p></p>
+    <button onclick="chng()">Change Info</button>
+</body>
+</html>
+<script>
+    function chng()
+    {
+        let a=document.getElementsByTagName("p")
+        console.log(a)
+        document.getElementById("head1").innerHTML="Text in second paragraph is: "+a[1].innerHTML
+        a[0].style.color="red"
+        a[0].style.fontSize="30px"
+        a[4].innerHTML="Shivaji nagar branch"
+    }
+</script>
