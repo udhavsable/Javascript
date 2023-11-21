@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #a{
+           height: 400px;
+           width: 400px;
+           background-color: pink;
+           position: relative;
+        }
+        #b{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: purple;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+        <div id="b"></div>
+    </div>
+    <button onclick="move()">Click Me</button>
+
+    <script lang="javascript">
+         function move()
+         {
+            let id=null;
+            const e=document.getElementById("b")
+            let l=0
+            let t=0
+            clearInterval(id)
+            id=setInterval(end,5)
+            function end()
+            {
+               if(l==350)
+               {
+                clearInterval(id);
+                id=setInterval(end1,5)
+               }
+               else
+               {
+                l++;
+                e.style.left=l+"px"
+               }
+            } 
+            function end1()
+         {
+            if(t==350)
+            {
+                clearInterval(id)
+                id=setInterval(end2,5)
+            }   
+            else
+            {
+               t++;
+               e.style.top=t+"px"
+            }
+          }
+          function end2()
+         {
+            if(l==0)
+            {
+                clearInterval(id)
+                id=setInterval(end3,5)
+            }   
+            else
+            {
+               l--;
+               e.style.left=l+"px"
+            }
+          }
+          function end3()
+         {
+            if(t==0)
+            {
+                clearInterval(id)
+                id=setInterval(end,5)
+            }   
+            else
+            {
+               t--;
+               e.style.top=t+"px"
+            }
+          }
+         }
+    </script>
+</body>
+</html>
