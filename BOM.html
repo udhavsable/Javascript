@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <button onclick="openwin()">Open window</button>
+    <button onclick="closewin()">close window</button>
+    <button onclick="resizewin()">resize window</button>
+    <button onclick="movewin()">move window</button>
+    <script>
+         document.getElementById("p1").innerHTML="Height of window is:"+window.innerHeight+"<br>"+
+         "Width of window is:"+window.innerWidth
+         function openwin()
+         {
+            let wop=window.open("","","height=200,width=200")
+            // window.open("http://www.yahoo.com")
+            // window.open("DomAnimation.html")
+         }
+         function closewin()
+         {
+            window.close()
+         }
+         function resizewin()
+         {
+            wop.resizeTo(500,500)
+         }
+         function movewin()
+         {
+            wop.moveTo(100,300)
+         }
+         window.name=" New Window"
+         document.getElementById("p2").innerHTML="Name of window is:"+window.name
+         document.getElementById("p3").innerHTML="Location of window is:"+window.location
+    </script>
+</body>
+</html>
