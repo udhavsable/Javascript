@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head"></h1>
+    <script>
+        function msg(a)
+        {
+           document.getElementById("head").innerHTML=a
+        }
+        function message()
+        {
+            msg("Hello Everyone!!!")
+        }
+        function message1()
+        {
+            msg("Good Evening!!!")
+        }
+        // message()
+        // message1()
+
+        function total(tot)
+        {
+            document.write("Addition is: "+tot)
+        }
+        function add(num1,num2,sum)
+        {
+            let c=num1+num2
+            sum(c)
+        }
+        add(28,56,total)
+    </script>
+</body>
+</html> 
